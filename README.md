@@ -8,7 +8,7 @@ Welcome to **2D Map Driving**! This is a project that lets you simulate driving 
 
 **Ready to start driving?** Click here to try the live demo:
 
-[**START 2D MAP DRIVING!**](#)
+[**START 2D MAP DRIVING!**](https://ignahrz98.github.io/2d-map-driving/)
 
 ---
 
