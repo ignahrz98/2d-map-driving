@@ -1,0 +1,101 @@
+body {
+	margin: 0;
+	padding: 0;
+	overflow: hidden; /* Evitar barras de desplazamiento */
+	font-family: sans-serif;
+}
+
+#map {
+	width: 100vw; /* Ocupa el 100% del ancho de la ventana */
+	height: 100vh; /* Ocupa el 100% del alto de la ventana */
+	position: absolute; /* Para que los botones se superpongan */
+	top: 0;
+	left: 0;
+	z-index: 1; /* Asegura que el mapa esté debajo de los controles */
+}
+
+/* Estilos para los controles móviles */
+.controls-mobile {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex; /* Para organizar los botones */
+	flex-direction: column; /* Apila los botones verticalmente */
+	gap: 10px; /* Espacio entre los botones */
+	z-index: 1000; /* Asegura que los botones estén por encima del mapa */
+}
+
+.controls-mobile .horizontal-controls {
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+}
+
+.controls-mobile button {
+	background-color: rgb(0, 0, 0, 0.6); /* Fondo semi-transparente */
+	color: white;
+	border: none;
+	border-radius: 8px;
+	padding: 15px 20px;
+	font-size: 1.5em;
+	cursor: pointer;
+	user-select: none; /* Evita que el texto se seleccione */
+	transition: background-color 0.2s ease;
+}
+
+.controls-mobile button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Nuevos estilos para el buscador */
+.search-container {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    width: 250px;
+}
+
+.search-container button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (min-width: 768px) {
+	.controls-mobile {
+		display: none;
+	}
+}
+
+@media (max-width: 768px) {
+	.search-container input {
+		width: 80%;
+		padding: 5px;
+	}
+
+	.search-container button {
+		padding: 5px;
+	}
+}

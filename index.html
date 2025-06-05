@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2D Map Driving</title>
+
+	<meta name="description" content="Drive a vehicle in a 2D environment directly on real Google Maps.">
+    <meta property="og:title" content="2D Map Driving">
+    <meta property="og:description" content="Drive a vehicle in a 2D environment directly on real Google Maps.">
+
+	 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     	integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     	crossorigin=""/>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="map"></div>
+
+	<div class="search-container">
+        <input type="text" id="locationSearch" placeholder="Buscar ubicación...">
+        <button id="searchButton">Buscar</button>
+    </div>
+
+	<div class="controls-mobile">
+		<button id="up">⬆️</button>
+		<div class="horizontal-controls">
+            <button id="left">⬅️</button>
+            <button id="right">➡️</button>
+        </div>
+        <button id="down">⬇️</button>
+	</div>
+
+	<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     	integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     	crossorigin=""></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
